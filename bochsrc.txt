@@ -1,0 +1,20 @@
+romimage: file=/usr/local/Cellar/bochs/2.6.11/share/bochs/BIOS-bochs-latest
+
+vgaromimage: file=/usr/local/Cellar/bochs/2.6.11/share/bochs/VGABIOS-lgpl-latest-cirrus
+
+# 1.44=磁盘镜像位置
+floppya: 1_44=boot.img, status=inserted
+
+# 从软盘启动
+boot: disk
+#输出日志
+log: bochsout.txt
+
+# 置鼠标不可用
+mouse: enabled=0
+#键盘配置
+keyboard: keymap=#$BXSHARE/keymaps/x11-pc-us.map
+#内存容量
+megs: 32
+
+ata0-master: type=disk, path="hd60M.img", mode=flat
